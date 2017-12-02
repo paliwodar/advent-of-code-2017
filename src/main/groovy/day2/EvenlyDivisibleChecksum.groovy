@@ -7,10 +7,10 @@ class EvenlyDivisibleChecksum {
     }
 
     def static evenDivision(List<Integer> list) {
-        [list, list].combinations()
-                    .findAll { it[0] % it[1] == 0}
-                    .collect { it[0] / it[1]}
-                    .max()
+        ([list.sort().withIndex()] * 2)
+                .combinations()
+                .collectMany { x1, x2 -> x1[1] > x2[1] && x1[0] % x2[0] == 0 ? [x1[0] / x2[0]] : [] }
+                .get(0)
     }
 
 }
