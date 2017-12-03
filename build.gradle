@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.11'
+    compile group: 'com.google.guava', name: 'guava', version: "19.0"
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
 }

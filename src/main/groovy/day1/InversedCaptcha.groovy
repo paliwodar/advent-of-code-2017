@@ -8,6 +8,4 @@ class InversedCaptcha {
              .collect { x, i -> x == input[(i + 1) % input.size()] ? x as Integer : 0 }
              .sum(0)
     }
-
-
 }
