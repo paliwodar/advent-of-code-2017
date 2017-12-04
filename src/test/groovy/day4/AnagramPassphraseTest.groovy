@@ -14,13 +14,12 @@ class AnagramPassphraseTest extends Specification {
         "abcde xyz ecdab"          | false
         "oiii ioii iioi iiio"      | false
         "iiii oiii ooii oooi oooo" | true
-
     }
 
     def finalTest() {
         given:
         def input = []
-        new File('src/test/resources/day4_input.txt').eachLine { line ->
+        new File('src/test/resources/day4/input.txt').eachLine { line ->
             input << line
         }
 

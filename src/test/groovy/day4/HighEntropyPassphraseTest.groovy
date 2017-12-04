@@ -24,13 +24,12 @@ class HighEntropyPassphraseTest extends Specification {
         ["aa bb cc dd ee",
          "aa bb cc dd aa",
          "aa bb cc dd aaa"] | 2
-
     }
 
     def finalTest() {
         given:
         def input = []
-        new File('src/test/resources/day4_input.txt').eachLine { line ->
+        new File('src/test/resources/day4/input.txt').eachLine { line ->
             input << line
         }
 
