@@ -10,10 +10,9 @@ class NeighboursSpiralSum {
         def positionsToSum = [(new Tuple2(0, 0)): 1]
         def directions = cycle([[1, 0], [0, 1], [-1, 0], [0, -1]].collect { it as Tuple2 }).iterator()
 
-        (2..100).collect {
+        (2..42).collect {
             positionsList += goForward(positionsList.last(), it / 2, directions.next(), positionsToSum)
         }
-
         return positionsToSum[positionsList[n]]
     }
 
