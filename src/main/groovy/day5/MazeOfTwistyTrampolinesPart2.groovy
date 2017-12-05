@@ -1,6 +1,6 @@
 package day5
 
-class OffsetListPart2 {
+class MazeOfTwistyTrampolinesPart2 {
 
     static def calculate(List<Integer> input) {
         def index = 0;

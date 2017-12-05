@@ -2,15 +2,15 @@ package day5
 
 import spock.lang.Specification
 
-class OffsetListTest extends Specification {
+class MazeOfTwistyTrampolinesPart2Test extends Specification {
 
     def exampleTest() {
         expect:
-        OffsetList.calculate(input) == result
+        MazeOfTwistyTrampolinesPart2.calculate(input) == result
 
         where:
         input            | result
-        [0, 3, 0, 1, -3] | 5
+        [0, 3, 0, 1, -3] | 10
     }
 
     def finalTest() {
@@ -21,7 +21,7 @@ class OffsetListTest extends Specification {
         }
 
         expect:
-        OffsetList.calculate(input) == 343467
+        MazeOfTwistyTrampolinesPart2.calculate(input) == 24774780
     }
 
 }
