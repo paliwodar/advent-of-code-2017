@@ -2,11 +2,13 @@ package day8
 
 import spock.lang.Specification
 
-class Day8Test extends Specification {
+class RegistersTest extends Specification {
+
+    def registers = new Registers()
 
     def test() {
         expect:
-        Day8.calculate(input) == result
+        registers.calculate(input) == result
 
         where:
         input                    | result
@@ -18,7 +20,7 @@ class Day8Test extends Specification {
 
     def test2() {
         expect:
-        Day8.calculate(input) == result
+        registers.calculate(input) == result
 
         where:
         input                      | result
@@ -33,6 +35,6 @@ class Day8Test extends Specification {
         }
 
         expect:
-        Day8.calculate(input) == 7310
+        registers.calculate(input) == 7310
     }
 }

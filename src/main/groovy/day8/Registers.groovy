@@ -1,9 +1,9 @@
 package day8
 
-class Day8 {
-    static Map<String, Integer> map = [:]
+class Registers {
+    Map<String, Integer> map = [:]
 
-    static def calculate(List<String> s) {
+    def calculate(List<String> s) {
         def high = -1
         for (int i = 0; i < s.size(); i++) {
             def t = s[i].split()
@@ -17,7 +17,7 @@ class Day8 {
         return high
     }
 
-    static def process(String reg, instr, n, condReg, op, opArg) {
+    def process(String reg, instr, n, condReg, op, opArg) {
         def reg1Value = map.getOrDefault(reg, 0)
         def reg2Value = map.getOrDefault(condReg, 0)
         def opMul = instr == "inc" ? 1 : -1
