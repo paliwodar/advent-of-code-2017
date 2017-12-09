@@ -37,4 +37,6 @@ class RegistersTest extends Specification {
         expect:
         registers.calculate(input) == 7310
     }
+
+
 }
