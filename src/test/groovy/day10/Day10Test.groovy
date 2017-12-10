@@ -1,41 +1,38 @@
 package day10
 
-import day9.StreamProcessing
+import spock.lang.Ignore
 import spock.lang.Specification
-import spock.lang.Unroll
 
 class Day10Test extends Specification {
 
-    @Unroll
+    @Ignore
     def testExamples() {
         expect:
-        StreamProcessing.calculate(input) == result
-
-        where:
-        input  | result
-        "row1" | 0
-        "row2" | 0
+        Day10.calculate(5, [3, 4, 1, 5]) == 12
     }
 
-    @Unroll
-    def testExamples2() {
-        expect:
-        StreamProcessing.calculate(input) == result
-
-        where:
-        input    | result
-        ["row1"] | 0
-        ["row2"] | 0
-    }
-
+    @Ignore
     def finalTest() {
-        given:
-        def input = []
-        new File('src/test/resources/day9/input.txt').eachLine { line ->
-            input << (line)
-        }
-
         expect:
-        StreamProcessing.calculate(input[0]) == 0
+        Day10.calculate(256, input) == result
+
+        where:
+        input                                                                | result
+        [165, 1, 255, 31, 87, 52, 24, 113, 0, 91, 148, 254, 158, 2, 73, 153] | 0
+    }
+
+    def finalTestPart2() {
+        expect:
+        Day10.calculate(256, "165,1,255,31,87,52,24,113,0,91,148,254,158,2,73,153") == "2f8c3d2100fdd57cec130d928b0fd2dd"
+    }
+
+    def testExample1Part2() {
+        expect:
+        Day10.calculate(256, "AoC 2017") == "33efeb34ea91902bb2f59c9920caa6cd"
+    }
+
+    def testExample2Part2() {
+        expect:
+        Day10.calculate(256, "") == "a2582a3a0e66e6e86e3812dcb672a272"
     }
 }
