@@ -1,6 +1,6 @@
 package day10
 
-class Day10 {
+class KnotHash {
 
     static def calculate(int size, String bytes) {
 
