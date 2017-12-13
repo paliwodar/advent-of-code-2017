@@ -1,7 +1,10 @@
 package day11
 
+import groovy.transform.CompileStatic
+
 import static java.lang.Math.abs
 
+@CompileStatic
 class HexEd {
 
     static def calculate(String input) {
@@ -52,7 +55,7 @@ class HexEd {
         return maxDistance
     }
 
-    static def distance(double x, double y) {
+    static double distance(double x, double y) {
         if (x == 0) {
             return y
         } else {
