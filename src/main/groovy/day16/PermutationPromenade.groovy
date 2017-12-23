@@ -1,11 +1,11 @@
 package day16
 
-class Day16 {
+class PermutationPromenade {
 
     List<String> input
     List<String> programs = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p']
 
-    Day16(String input, int size = 16) {
+    PermutationPromenade(String input, int size = 16) {
         this.input = input.split(",")
         programs = programs.subList(0, size)
     }
