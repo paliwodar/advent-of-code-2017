@@ -8,14 +8,6 @@ import static DiskDefragmentation.countGroups
 
 class DiskDefragmentationTest extends Specification {
 
-    def input = []
-
-    def setup() {
-        new File('src/test/resources/day14/input.txt').eachLine { line ->
-            input << (line)
-        }
-    }
-
     @Unroll
     def testScore() {
         expect:

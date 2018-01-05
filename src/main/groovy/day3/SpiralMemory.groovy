@@ -10,12 +10,11 @@ class SpiralMemory {
         def directions = [[1, 0], [0, 1], [-1, 0], [0, -1]].collect { it as Tuple2 }
         def steps = 0
 
-        (2..100).collect {
-            positions += goForward(positions.last(), it / 2, directions[steps++ % 4])
+        for (int i = 2; positions.size() <= n; i++) {
+            positions += goForward(positions.last(), i / 2, directions[steps++ % 4])
         }
 
         return abs(positions[n].first) + abs(positions[n].second)
-
     }
 
     private static goForward(Tuple2<Integer, Integer> from, def distance, Tuple2 direction) {

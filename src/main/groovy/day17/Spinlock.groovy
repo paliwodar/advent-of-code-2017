@@ -3,14 +3,14 @@ package day17
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class Day17 {
+class Spinlock {
 
     int step = 3
     int currentIndex = 0
     int currentNumber = 0
     int numberAfterZero = 0
 
-    Day17(int step) {
+    Spinlock(int step) {
         this.step = step
     }
 
@@ -26,7 +26,7 @@ class Day17 {
     }
 
     static void main(String[] args) {
-        Day17 spin = new Day17(354)
+        Spinlock spin = new Spinlock(354)
         println spin.spin(50000000)
     }
 }
