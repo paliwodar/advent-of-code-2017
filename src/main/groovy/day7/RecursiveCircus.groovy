@@ -46,7 +46,4 @@ class RecursiveCircus {
                    .find { String k -> list.count { it.contains(k) } == 1 }
     }
 
-    static void main(String[] args) {
-    }
-
 }

@@ -6,5 +6,4 @@ class CorruptionChecksum {
         input.collect { it.max() - it.min() }.sum()
     }
 
-
 }
